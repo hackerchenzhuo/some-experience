@@ -1,10 +1,11 @@
 # 原创：VS c++ 连接并使用数据库  之数据库连接配置
 
  
-
+![](https://img-blog.csdnimg.cn/20190624160238415.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9jaGVuemh1by5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
 ## 1、建立数据库
 
 打开SQL Server Management Studio，根据我报告中设计数据库中的表及其之间的依赖关系等等。我的数据库名字为HworkDB，表项如下：
+![](https://img-blog.csdnimg.cn/20190624160238474.png)
 
 ## 2、配置数据源
 
@@ -13,10 +14,13 @@
 配置数据源说通俗了就是为数据库创建一个对外的窗口，应用程序通过这个窗口来访问数据库中的数据。具体配置步骤为：
 
       1） 打开 控制面板--〉管理工具--〉数据源，在用户DSN面板选择 “添加”
+![](https://img-blog.csdnimg.cn/20190624160238662.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9jaGVuemh1by5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20190624160238702.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9jaGVuemh1by5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
 
       2） 在数据源驱动程序中选择 “SQL Server” --〉完成，即打开 “创建到SQL Server 的新数据源”
 
       3） 在“数据源名称”中填入名称，填 TestSQL01，然后选择 服务器，在其中选择要连接到的SQL Server服务器。（如果电脑的SQL Server服务打开的话，就会有自己的主机名。或者选择网络上的某个SQL Server。
+![](https://img-blog.csdnimg.cn/20190624160239756.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9jaGVuemh1by5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
 
       4） 点击 下一步 配置认证信息
 
